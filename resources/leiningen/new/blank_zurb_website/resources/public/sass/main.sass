@@ -1,0 +1,56 @@
+@import "compass/typography"
+
+$header-height: 70px
+$text-color:  #383838
+
+a
+  text-decoration: none
+  color: $text-color
+  &:hover
+    color: $text-color
+    text-decoration: underline
+
+ul
+  +no-bullets
+  //margin-left: 10px
+
+header
+  background-color: white
+  width: 100%
+  #headerContainer
+    height: $header-height - 10
+    border-bottom: 1px solid #ccc
+
+  #logo
+    +replace-text("/logo.png", 10, 9)
+    height: 30px
+    margin: 15px 10px 0 0
+    
+  #headerMenu 
+    ul
+      +horizontal-list
+      float: right
+      li
+        padding: 18px 20px 0 0
+
+#sidebarMenu
+  ul
+    padding: 10px 0 0 10px
+    li
+      padding: 0 40px 10px 0
+
+.submenu
+  hr
+    margin: 0 0 10px    
+  ul
+    +horizontal-list
+    padding: 10px 0 0 10px
+    width: 100%
+    li
+      //text-align: right
+      min-width: 60px
+      padding: 0 60px 10px 0
+
+.top-link a
+  float: right
+  padding: 10px
